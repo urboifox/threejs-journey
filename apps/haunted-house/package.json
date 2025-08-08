@@ -1,0 +1,22 @@
+{
+    "name": "@3jsj/haunted-house",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --port 3000",
+        "build": "tsc && vite build",
+        "format": "prettier --write .",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "typescript": "~5.7.2",
+        "vite": "^6.2.0",
+        "@types/three": "^0.175.0"
+    },
+    "dependencies": {
+        "gsap": "^3.12.7",
+        "lil-gui": "^0.20.0",
+        "three": "^0.175.0"
+    }
+}
