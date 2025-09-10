@@ -32,9 +32,10 @@ const controls = new OrbitControls(camera, renderer.domElement);
 // elements
 const plane = new T.Mesh(
     new T.PlaneGeometry(10, 10),
-    new T.RawShaderMaterial({
+    new T.ShaderMaterial({
         vertexShader: testVertexShader,
-        fragmentShader: testFragmentShader
+        fragmentShader: testFragmentShader,
+        side: T.DoubleSide
     })
 );
 plane.position.z = -10;
@@ -46,6 +47,7 @@ function update() {
     timer.update();
 
     renderer.render(scene, camera);
+    controls.target.copy(plane.position);
     controls.update();
     requestAnimationFrame(update);
 }
